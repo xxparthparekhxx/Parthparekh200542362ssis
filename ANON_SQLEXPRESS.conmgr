@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ANON_SQLEXPRESS"
+  DTS:DTSID="{D0B21B00-C5DC-4A2B-BF09-5A6B156056B0}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=ANON\SQLEXPRESS;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Parthparekh200542362ssis-{D0B21B00-C5DC-4A2B-BF09-5A6B156056B0}ANON\SQLEXPRESS;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

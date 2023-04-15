@@ -1,0 +1,1159 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/15/2023 4:09:58 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ANON"
+  DTS:CreatorName="ANON\xxpar"
+  DTS:DTSID="{7066AAE0-9ED6-4AC3-8FD2-7F428659B49B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="4105"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{8C6B1448-DD79-4E24-B878-631C73C73886}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ANON\SQLEXPRESS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{47AB315E-0214-41DE-95FA-F97F6D79367C}"
+      DTS:ObjectName="ANON\SQLEXPRESS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ANON\SQLEXPRESS;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{47AB315E-0214-41DE-95FA-F97F6D79367C}ANON\SQLEXPRESS;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4224D24F-DA61-43C9-9147-DF8C5C8058CE}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4105"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\xxpar\Downloads\archive(4)\Customers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{E1177990-7113-484C-AEE0-5FD0CDAB0A0C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{D69A69F8-0939-47A1-A78E-765C5D58A2C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{C2DEC457-8759-4ED1-92A4-65ACC73928BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Annual Income ($)"
+              DTS:DTSID="{25487E39-C16D-471A-852C-322F80039D6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Spending Score (1-100)"
+              DTS:DTSID="{29FB913F-EB62-4AC3-B4C4-6EEAA9ECF2FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Profession"
+              DTS:DTSID="{8CCB95E6-BB58-4FB1-A872-F82136577465}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Work Experience"
+              DTS:DTSID="{7C95AE7E-21AE-44ED-9BFC-F79E323B6D50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Family Size"
+              DTS:DTSID="{1FB7BD2E-314B-4E72-BA5F-5AC06CFBEB3A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SMTP Connection Manager]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{2F2B0C5F-2F22-4D87-A25A-CB716A7EEEE8}"
+      DTS:ObjectName="SMTP Connection Manager">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=smtp.gmail.com;UseWindowsAuthentication=False;EnableSsl=True;"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CSV File Source"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{c61f1cac-8e04-4720-955f-a577e0c11386}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CSV File Source"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CSV File Source\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CSV File Source\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CSV File Source\Conditional Split.Inputs[Conditional Split Input].Columns[Profession]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Profession"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Profession]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CSV File Source\Conditional Split.Outputs[NullRecords]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="NullRecords"
+                  synchronousInputId="Package\CSV File Source\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Profession]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(Profession)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CSV File Source\Conditional Split.Outputs[NotNullRecords]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="NotNullRecords"
+                  synchronousInputId="Package\CSV File Source\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CSV File Source\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\CSV File Source\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CSV File Source\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CSV File Source\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CSV File Source\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CSV File Source\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CSV File Source\CSV File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="4105"
+              name="CSV File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CSV File Source\CSV File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      length="50"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="50"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      length="50"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Age]"
+                      name="Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Annual Income ($)]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Annual Income ($)]"
+                      length="50"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Annual Income ($)]"
+                      name="Annual Income ($)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Spending Score (1-100)]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Spending Score (1-100)]"
+                      length="50"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Spending Score (1-100)]"
+                      name="Spending Score (1-100)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Profession]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Profession]"
+                      length="50"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Profession]"
+                      name="Profession"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Work Experience]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Work Experience]"
+                      length="50"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Work Experience]"
+                      name="Work Experience"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Family Size]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Family Size]"
+                      length="50"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Family Size]"
+                      name="Family Size"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Annual Income ($)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Annual Income ($)" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Spending Score (1-100)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Spending Score (1-100)" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Profession]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Profession" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Work Experience]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Work Experience" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].ExternalColumns[Family Size]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Family Size" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CSV File Source\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CSV File Source\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CSV File Source\Data Conversion.Inputs[Data Conversion Input].Columns[CustomerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerID"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\Data Conversion.Inputs[Data Conversion Input].Columns[Age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\Data Conversion.Inputs[Data Conversion Input].Columns[Annual Income ($)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Annual Income ($)"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Annual Income ($)]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\Data Conversion.Inputs[Data Conversion Input].Columns[Spending Score (1-100)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Spending Score (1-100)"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Spending Score (1-100)]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\Data Conversion.Inputs[Data Conversion Input].Columns[Work Experience]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Work Experience"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Work Experience]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\Data Conversion.Inputs[Data Conversion Input].Columns[Family Size]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Family Size"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Family Size]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\CSV File Source\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[CustomerID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[CustomerID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Age]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Age]"
+                      name="Age"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Age]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Annual Income ($)]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Annual Income ($)]"
+                      name="Annual Income ($)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Annual Income ($)]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Spending Score (1-100)]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Spending Score (1-100)]"
+                      name="Spending Score (1-100)"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Spending Score (1-100)]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Work Experience]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Work Experience]"
+                      name="Work Experience"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Work Experience]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Family Size]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Family Size]"
+                      name="Family Size"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Family Size]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\CSV File Source\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CSV File Source\SQL Server"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="SQL Server"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CSV File Source\SQL Server.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ANON\SQLEXPRESS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ANON\SQLEXPRESS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].Columns[Profession]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Profession"
+                      externalMetadataColumnId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Profession]"
+                      lineageId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output].Columns[Profession]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].Columns[CustomerID]"
+                      cachedDataType="numeric"
+                      cachedName="CustomerID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].Columns[Age]"
+                      cachedDataType="numeric"
+                      cachedName="Age"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].Columns[Annual Income ($)]"
+                      cachedDataType="cy"
+                      cachedName="Annual Income ($)"
+                      externalMetadataColumnId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Annual Income ($)]"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Annual Income ($)]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].Columns[Spending Score (1-100)]"
+                      cachedDataType="numeric"
+                      cachedName="Spending Score (1-100)"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Spending Score (1-100)]"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Spending Score (1-100)]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].Columns[Work Experience]"
+                      cachedDataType="numeric"
+                      cachedName="Work Experience"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Work Experience]"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Work Experience]" />
+                    <inputColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].Columns[Family Size]"
+                      cachedDataType="numeric"
+                      cachedName="Family Size"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Family Size]"
+                      lineageId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output].Columns[Family Size]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Profession]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Profession" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Annual Income ($)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Annual Income ($)" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Spending Score (1-100)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Spending Score (1-100)" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Work Experience]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Work Experience" />
+                    <externalMetadataColumn
+                      refId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Family Size]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Family Size" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CSV File Source\SQL Server.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CSV File Source\SQL Server.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CSV File Source\SQL Server.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CSV File Source\SQL Server.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CSV File Source\SQL Server.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CSV File Source.Paths[Data Conversion Output]"
+              endId="Package\CSV File Source\SQL Server.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\CSV File Source\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\CSV File Source.Paths[Flat File Source Output]"
+              endId="Package\CSV File Source\Conditional Split.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\CSV File Source\CSV File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\CSV File Source.Paths[NotNullRecords]"
+              endId="Package\CSV File Source\Data Conversion.Inputs[Data Conversion Input]"
+              name="NotNullRecords"
+              startId="Package\CSV File Source\Conditional Split.Outputs[NotNullRecords]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Send Mail Task"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Send Mail Task"
+      DTS:DTSID="{7035776b-9046-4fbf-8070-86d6378d2bf4}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Send Mail Task"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{2F2B0C5F-2F22-4D87-A25A-CB716A7EEEE8}"
+          SendMailTask:From="jashankkp1999@gmail.com"
+          SendMailTask:To="xx.parthparekh.xx@gmail.com"
+          SendMailTask:Subject="SSIS Email"
+          SendMailTask:MessageSource="The SSIS Package is completed successfully." xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{dc16f624-79cd-421f-a30f-90edfe65f064}"
+      DTS:From="Package\CSV File Source"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Send Mail Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\CSV File Source"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Send Mail Task"
+          TopLeft="61.666668984625,135.600000123978" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="137.033334492313,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.0000001239777"
+              Start="0,0"
+              End="0,26.5000001239777">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5000001239777" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\CSV File Source">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\CSV File Source\Data Conversion"
+          TopLeft="209.590900981065,289.372729528745" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\CSV File Source\Conditional Split"
+          TopLeft="201.060598071176,135.200001074473" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\CSV File Source\SQL Server"
+          TopLeft="207.954537191175,406.703033535216" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\CSV File Source\CSV File Source"
+          TopLeft="207.166658653154,28.0333335124122" />
+        <EdgeLayout
+          Id="Package\CSV File Source.Paths[Data Conversion Output]"
+          TopLeft="288.17271908612,330.972729528745">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75.7303040064714"
+              Start="0,0"
+              End="0,68.2303040064714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.2303040064714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CSV File Source.Paths[NotNullRecords]"
+          TopLeft="286.325749526121,176.800001074473">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,112.572728454272"
+              Start="0,0"
+              End="0,105.072728454272">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,105.072728454272" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-34.222578125,47.661852508386,68.44515625,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CSV File Source.Paths[Flat File Source Output]"
+          TopLeft="284.913628362165,69.6333335124122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65.5666675620609"
+              Start="0,0"
+              End="0,58.0666675620609">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.0666675620609" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CSV File Source\SQL Server">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
